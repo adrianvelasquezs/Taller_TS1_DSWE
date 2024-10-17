@@ -18,7 +18,6 @@ export class Serie {
         this.link = link;
         this.imageUrl = imageUrl;
     }
-
     getId(): number{
         return this.id;
     }
