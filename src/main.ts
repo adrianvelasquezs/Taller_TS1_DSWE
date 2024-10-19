@@ -1,9 +1,12 @@
 import { Serie } from './serie.js';
 import { series } from './data.js';
 
-const tableBody: HTMLElement | null = document.getElementById("seriesTableBody")!;
+const tableBody: HTMLElement = document.getElementById("seriesTableBody")!;
 
-if (tableBody) {
+renderTable(series);
+
+function renderTable(  series: Serie[] ): void {
+    tableBody.innerHTML = '';
     series.forEach(serie => {
         const row = document.createElement("tr");
 
@@ -26,3 +29,4 @@ if (tableBody) {
         tableBody.appendChild(row);
     });
 }
+

@@ -1,6 +1,8 @@
 import { series } from './data.js';
 var tableBody = document.getElementById("seriesTableBody");
-if (tableBody) {
+renderTable(series);
+function renderTable(series) {
+    tableBody.innerHTML = '';
     series.forEach(function (serie) {
         var row = document.createElement("tr");
         var idCell = document.createElement("td");
